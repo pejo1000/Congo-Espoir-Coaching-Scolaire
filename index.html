@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+           <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles_petit_ecran.css">
+        <link rel="stylesheet" href="styles_pop_up.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+        <link rel="icon" href="Image/icon.PNG" type="image/png">
+        <title>Home</title>
+        <meta name="author" content="CO-ESP CS">
+        <meta name="keywords" content="Solutions numériques, Recherche et développement au Congo, Innovation technologique, Transformation numérique, Développement d'applications, Intelligence artificielle, Internet des objets, Réalité virtuelle, Cybersécurité, Big data, Cloud computing, Analyse de données, Programmation, Développement web, Expérience utilisateur (UX), Conception d'interfaces, Technologie émergente, Ingénierie logicielle, Solutions sur mesure, Développement agile,Electronique, Congo Braazaville, Pointe-Noire,Centre de recherche et de développement des solutions numériques et électroniques">
+        <meta name="description" content="Congo Espoir Coaching Scolaire">
+        <script src="script_1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+        <script src="scripts_pop_up.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+        <link rel="stylesheet" href="styles_gaudre.css">
+        <link rel="stylesheet" href="Menu_flottant.css">
+
+        <style>
+            /* Styles pour la bannière de cookies */
+            #cookie-banner {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                display: none;
+            }
+    
+            #cookie-banner button {
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            //  gérer la bannière de cookies
+            document.addEventListener('DOMContentLoaded', function() {
+                const cookieBanner = document.getElementById('cookie-banner');
+                const acceptButton = document.getElementById('accept-cookies');
+    
+                // Vérifie si l'utilisateur a déjà accepté les cookies
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    cookieBanner.style.display = 'block';
+                }
+    
+                // Fonction pour masquer la bannière et enregistrer le consentement
+                acceptButton.addEventListener('click', function() {
+                    localStorage.setItem('cookiesAccepted', true);
+                    cookieBanner.style.display = 'none';
+                });
+            });
+        </script>
+
+<script>
+    // Détecter si le navigateur prend en charge le protocole WhatsApp
+    function isWhatsAppSupported() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Si le navigateur est sur un appareil mobile et supporte le protocole WhatsApp
+        if (/android|ios|iphone|ipad/i.test(userAgent) && /whatsapp/i.test(userAgent)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    // Rediriger vers le site WhatsApp si le protocole personnalisé n'est pas pris en charge
+    document.getElementById('whatsapp-link').addEventListener('click', function(event) {
+        if (!isWhatsAppSupported()) {
+            event.preventDefault(); 
+            window.location.href = "https://wa.me/242067105217"; // Redirige vers le site WhatsApp
+        }
+    });
+</script>        
+
+
+    </head>
+    <body>
+        <div id="cookie-banner">
+            <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez nos conditions d'utilisations.</p>
+            <button id="accept-cookies">J'accepte</button>
+        </div>
+
+        <header id="header">
+            <div id="logo"><img src="Image/icon.PNG" width="100px" style="border-radius: 20px;" alt="logo"></div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-links">
+            <nav>
+                <ul>
+                    <li id="index"><a href="inscrire.html" style="border-radius: 25px 0px 25px 0px;">S'inscrire</a></li>
+                    <li id="contact"><a href="contact.html">Contacter</a></li>
+                    <li id="produit"><a href="produit.html" style="border-radius: 25px 0px 25px 0px;">A propos</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+        <section id="accueil" class="contenu_haut">
+            <div class="container" id="haut_lever">
+                <p style="font-size: 35px;">Bienvenue à</p>
+                <h1>Congo Espoir Coaching Scolaire</h1>
+                <p style="border-radius: 20px; background-color: rgba(205, 207, 226, 0.123); color: rgb(23, 18, 88); padding: 10px; font-family:'Courier New', Courier, monospace;">Nous sommes une entreprise spécialisée dans l'encadrement et la formation de nos élèves, le coaching scolaire, dédiée au développement des compétences académiques et à l'épanouissement de chaque étudiant ! Votre partenaire pour le suivi scolaire et le developpement personnel.</p>
+                <br><br>
+                <a style="background-color: rgb(182, 51, 51); color: white; padding: 15px; text-decoration: none; border-radius: 15px; font-size: 24px;" href="produit.html">Lire plus</a>
+                <br><br>
+                
+                
+
+            </div>
+        </section>
+
+        
+        <br>
+        <!-- Section intermédiaire -->
+        <section id="presentation" class="contenu">
+            <div class="container">
+                <div style="display: block;">
+                    <h1 class="wd-fontsize-xl wd-title-color-primary" style="     margin-bottom: 0; font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Bienvenue à Congo Espoir Coaching Scolaire</h1>
+                    <br>
+                    <br>
+                    
+
+                    <p class="wd-fontsize-xl" id="xl" style="    font-family: var(--wd-text-font);     line-height: var(--wd-text-line-height); font-size: var(--wd-text-font-size);     color: #000000; padding-left: 6%; padding-right: 6%;">A CO-ESP CS, nous comprenons que chaque élève a des besoins et des préférences d’apprentissage uniques. Notre encadrement et notre coaching est adapté pour répondre aux besoins individuels des étudiants, en veillant à ce que chaque étudiant reçoive une attention personnalisée. Nous fournissons du matériel d’étude complet et effectuons régulièrement des tests blancs pour aider les étudiants à évaluer leurs progrès et à identifier les domaines à améliorer. Nos enseignants fournissent également un retour d’information individuel et un soutien pour aider les élèves à surmonter leurs faiblesses. Nous offrons également des services d’orientation et de conseil pour aider les étudiants à développer leurs compétences générales, telles que la communication, la gestion du temps et les compétences en leadership, qui sont essentielles pour réussir dans les emplois gouvernementaux. Au Centre d’entraînement CO-ESP CS, nous nous efforçons de maintenir un environnement d’apprentissage positif et encourageant qui favorise la curiosité intellectuelle et la croissance personnelle. Nous croyons que la réussite de nos étudiants témoigne de la qualité de notre encadrement et du dévouement de notre corps professoral.</p>
+                    <br>
+                    <br>
+                    <button id="demarrer-btn"><a href="admin.html" target="_blank">Formation</a></button>
+                    <br>
+                    <h1 class="wd-fontsize-xl wd-title-color-primary" style="     margin-bottom: 0; font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Joignez-vous à nous dès aujourd’hui pour découvrir la différence dans notre méthodologie d'encadrement et de coaching et faire un pas de plus vers la réalisation de votre rêve </h1>
+                    <br>
+                    <br>
+                    
+                    <a style="width: 30px; background-color: orange; border-radius: 20px; text-decoration: none; padding: 17px;" href="produit.html">En savoir plus</a>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="social-icons">
+                        <a href="https://instagram.com/coespcs?igshid=MTNiYzNiMzkwZA==" target="_blank" title="Instagram">
+                            <img src="Image/ico/954290_2227.svg" alt="Instagram">
+                        </a>
+                        
+                        <a href="https://www.facebook.com/profile.php?id=61553148333268&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                            <img src="Image/ico/jiuu.jpg" alt="Facebook">
+                        </a>
+                        
+                        <a class="link" id="whatsapp-link" href="whatsapp://send?phone=242067105217" target="_blank" title="WhatsApp">
+                            <img src="Image/ico/go.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+
+
+                </div>
+               
+
+                <br>
+                <br>
+                <br>
+                <div style="background-color: black; width: 100%; border-radius: 15px;">
+                    <h2 style="color: white; padding: 30px;">Découvrez ce que nous proposons</h2>
+                <p style="color: rgba(255, 255, 255, 0.76); margin-right: 10%; text-align: center; margin-left: 10%; margin-bottom: 6%;">Découvrez nos services de pointe qui font de CO-ESP CS le partenaire idéal pour le développement des compétences académiques de chaque étudiant.</p>
+                
+                <div style=" display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between; align-items: center;
+  justify-content: center;">
+
+                    <div class="img1">
+                        <img src="Image/CO-ESP CS image.png" style="border-radius: 15px;"  width="300px" alt="">
+                       
+                    </div>
+                    
+                     <div>
+                         <img src="Image/CO-ESP CS image 3.png" class="img1" width="300px" alt="">
+                     </div>
+                     <div>
+                        <img src="Image/CO-ESP CS imag4.png" class="img1" width="300px" alt="">
+                     </div>
+                    
+                  
+                    
+                </div>
+                <br>
+                <a style="width: 30px; background-color: orange; border-radius: 20px; text-decoration: none; padding: 17px;" href="contact.html">En savoir plus</a>
+                </div>
+                
+            </div>
+            
+        </section>
+
+            <br>
+            
+            <div class="bubble-container">
+                <div class="bubble">
+                    <img src="Image/nous recrutons.png" alt="Image 1">
+                    <h1 style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Libérez Votre Potentiel Avec Notre Coaching Scolaire</h1>
+                    <p style="color: rgba(0, 0, 0, 0.788); font-family: Arial, Helvetica, sans-serif;">Bienvenue chez CO-ESP CS, où l'éducation prend une nouvelle dimension. Nous comprenons que chaque élève est unique, avec des défis et des objectifs académiques spécifiques. C'est là que notre encadrementet coaching scolaire entrent en jeu, offrant une approche personnalisée pour libérer le plein potentiel de chaque étudiant.</p>
+                </div>
+            
+                <div class="bubble">
+                    <img src="Image/Suivi.png" alt="Image 2">
+                    <h1 style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;" >Suivi Scolaire Personnalisé pour l'Épanouissement Académique</h1>
+                    <p style="color: rgba(0, 0, 0, 0.788); font-family: Arial, Helvetica, sans-serif;">Chez CO-ESP CS, nous comprenons que chaque élève a son propre chemin académique, avec des défis uniques à surmonter et des objectifs spécifiques à atteindre. C'est pourquoi notre engagement envers le suivi scolaire personnalisé est au cœur de notre mission éducative. <br>
+                    <h2 style="font-family: Arial, Helvetica, sans-serif;">Le Suivi Scolaire Qui Fait la Différence</h2>
+                <br>Notre approche de suivi scolaire va au-delà des simples notes. Nous nous engageons à comprendre les besoins spécifiques de chaque élève, à identifier les points forts et les zones de développement, et à élaborer un plan personnalisé pour maximiser le potentiel académique. Que ce soit pour renforcer les compétences de base, développer des techniques d'étude efficaces ou préparer des examens cruciaux, notre suivi scolaire vise à créer des bases solides pour l'avenir.</p>
+                </div>
+            
+                <div class="bubble">
+                    <img src="Image/Developpement.png" alt="Image 3">
+                    <h1 style="font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Épanouissement Personnel à Travers le Développement Académique</h1>
+                    <p style="color: rgba(0, 0, 0, 0.575); font-family: Arial, Helvetica, sans-serif;">Chez CO-ESP CS, nous sommes profondément investis dans le développement personnel de chaque étudiant. Nous croyons que l'éducation va au-delà des connaissances académiques, et c'est pourquoi nous intégrons une approche holistique axée sur le développement personnel dans notre coaching <br>
+                    <h2 style="font-family: Arial, Helvetica, sans-serif;">Le Développement Personnel, Clé du Succès</h2>
+                     <br>
+                     Notre vision du coaching englobe bien plus que des notes élevées. Nous nous engageons à guider chaque étudiant vers une croissance personnelle significative. Au-delà des salles de classe, nous encourageons le renforcement de la confiance en soi, la gestion du stress, et l'acquisition de compétences essentielles pour une vie équilibrée.
+                    <h3 style="font-family: Arial, Helvetica, sans-serif;">Coaching pour la Vie Réelle</h3>
+                    <br>
+                    Notre programme de développement personnel vise à préparer les étudiants pour les défis du monde réel. Des compétences en communication efficace à la gestion du temps, nous fournissons les outils nécessaires pour exceller à l'école et au-delà. Notre approche ne se limite pas à la réussite académique, mais s'étend à la préparation complète pour les opportunités futures.</p>
+                </div>
+            </div>  
+
+            
+         
+
+            <section id="intelligence-artificielle" class="contenu mobile-stack">
+                <div id="intelligence-artificielle" class="container_ia">
+                    <h1 id="IA">Notre Approche Personnalisée</h1>
+                    <br>
+                    <br>
+                    <div class="intelligence-artificielle-content">
+                        <img src="Image/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-studying-bench-with-school-items-laptops-notebooks.jpg" alt="Intelligence Artificielle" class="demo">
+
+                        <p id="IA1">Au cœur de notre mission se trouve une conviction profonde : un coaching efficace commence par une compréhension approfondie de chaque individu. Nos coachs qualifiés travaillent en étroite collaboration avec les élèves, établissant une connexion personnelle qui va au-delà des manuels scolaires. Nous nous engageons à créer un environnement où chaque élève se sent compris, soutenu et encouragé. <br> <br>Le coaching scolaire n'est pas simplement une série de séances, mais une passerelle vers des résultats tangibles. Nous guidons nos élèves à travers des stratégies d'apprentissage efficaces, des techniques de gestion du temps et des conseils personnalisés pour surmonter les obstacles académiques. Les succès de nos élèves ne sont pas seulement des notes améliorées, mais une confiance accrue et un amour renouvelé pour l'apprentissage. <br> <br> <br><a href="produit.html" style="background-color: chocolate; color:  white; padding: 20px; border-radius: 25px 0px 25px 0px; text-decoration: none;">Foncer</a></p>
+                        
+
+                    </div>
+                </div>
+
+               
+            </section>
+
+            <!-- ... (existant) ... -->
+
+        <section id="developpement-web" class="contenu mobile-stack">
+            <div class="container">
+                <h1 id="web">Équilibre entre Éducation et Bien-Être</h1>
+                <br>
+                <br>
+                <div class="flex-container" id="web">
+                    <img src="Image/groupe-etude-du-peuple-africain.jpg" alt="Développement Web" class="demo">
+                    <p style="text-align: left; color: rgba(0, 0, 0, 0.76); background-color: rgb(214, 212, 212); border-radius: 20px; font-size: 13px; padding: 10px;">
+                        Nous croyons fermement qu'un épanouissement académique va de pair avec le bien-être émotionnel. Nos séances de coaching et d'encadrement intègrent des discussions sur la gestion du stress, la résilience, et la construction d'une mentalité positive. Nous créons un environnement qui favorise la croissance holistique et le bien-être à long terme. <br> <br> Le développement personnel est un investissement dans un futur épanoui. Chez CO-ESP CS, nous sommes fiers de contribuer à la formation d'individus compétents, confiants et prêts à relever les défis de demain. <br> <br> <br><a href="produit.html" style="background-color: rgb(70, 84, 212); color:  white; padding: 20px; border-radius: 25px 0px 25px 0px; text-decoration: none;">Découvrir</a>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+
+        <!-- ... (existant) ... -->
+
+        <section id="installation-reseau" class="contenu mobile-stack">
+            <div class="container">
+                <h1 style="font-size: 25px;">Partenariat avec les Parents et Éducateurs</h1>
+                <div class="flex-container" id="rx">
+                    <p style="text-align: left; color: rgba(0, 0, 0, 0.712); background-color: rgb(247, 239, 239); border-radius: 20px; padding: 10px; font-size: 13px;">
+                        Nous croyons fermement que le suivi scolaire est une collaboration entre l'élève, les parents et les éducateurs. En travaillant ensemble, nous créons un environnement solide de soutien éducatif. Nous fournissons des rapports réguliers sur la progression de l'élève, encourageons une communication ouverte et restons disponibles pour répondre aux questions et préoccupations. <br> <br> Le suivi scolaire chez CO-ESP CS n'est pas simplement une mesure corrective, mais une démarche proactive pour investir dans l'avenir éducatif de chaque élève. Nous croyons que chaque étape de progression compte et contribue à construire un parcours académique solide et épanouissant. <br> <br> <br><a href="produit.html" style="background-color: rgb(70, 84, 212); color:  white; padding: 20px; border-radius: 25px 0px 25px 0px;text-decoration: none; ">S'informer</a>
+                    </p>
+                    <img src="Image/groupe-enfants-africains-pretant-attention-classe.jpg" alt="image">
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ... (su) ... -->
+
+        <section id="decouvrez-offres" class="contenu">
+            <div class="container">
+                
+                    <h2 style="font-size: 35px; color: rgb(84, 29, 211);">Prêt à Commencer Votre Voyage?</h2>
+                    <br>
+                   
+                    <p style="color: rgba(255, 255, 255, 0.671); font-family: Arial, Helvetica, sans-serif; font-size: 20px;">Explorez les possibilités qui s'offrent à vous en rejoignant notre programme de coaching intégré. Contactez-nous dès aujourd'hui et donnez le premier pas vers un épanouissement académique et personnel avec CO-ESP CS</p>
+                    <div class="offres-container" >
+
+                        <div class="offre-bulle active" id="offre1">
+                            <img src="Image/Offre111.png" style="width: 400px;" alt="Offre 1">
+                            <br><br>
+                            <h3 style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; background-color: #673de6ad; border-radius: 25px 0px 25px 0px; padding: 3px;">Developpement personnel<br> <span style="font-size: 20px;"></span> </h3>
+                            <br><br>
+                            <br>
+                            <br><a href="contact.html" style="background-color: rgb(212, 150, 70); color:  white; padding: 20px; border-radius: 17px; text-decoration: none;">Soumettre</a>
+                        </div>
+                       
+                        
+                        <div class="offre-bulle" id="offre2">
+                            <img src="Image/offre12.png" style="width: 400px;" alt="Offre 1">
+                            <br><br>
+                            <h3 style="font-size: 25px; font-family: Arial, Helvetica, sans-serif; color:white ; background-color: #673de6ad; border-radius: 25px 0px 25px 0px; padding: 3px;">Gestion du temps<br> <span style="font-size: 20px;"></span>  </h3>
+                            <br>
+                            <br>
+                            <br><a href="contact.html" style="background-color: rgb(212, 150, 70); color:  white; padding: 20px; border-radius: 17px; text-decoration: none;">Soumettre</a>
+                        </div>
+                        <!-- autres bulles -->
+                        
+                        <div class="offre-bulle" id="offre3">
+                            <img src="Image/offre13.png" style="width: 400px;" alt="Offre 1">
+                            <br><br>
+                            <h3 style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: white; border-radius: 25px 0px 25px 0px;background-color: #673de6ad; padding: 3px;">Vers le leadership<br> <span style="font-size: 20px;"></span></h3>
+                           <br>
+                            <br>
+                            <br><a href="contact.html" style="background-color: rgb(212, 150, 70); color:  white; padding: 20px; border-radius: 17px; text-decoration: none;">Soumettre</a>
+                        </div>
+                        <!-- autres bulles -->
+                        
+                    </div>
+
+
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="carousel-buttons">
+            <div class="offre-carousel">
+                        
+                <div class="offre-buttons" style=" width: 200px; margin: 0 auto; margin-left: 50%; ">
+                    <button class="prev-button" style="width: 60px; height: 40px; border-radius: 25px 0px 25px 0px; background-color: rgb(224, 145, 155); color: white; border: 0px; font-size: 20px;"><i class="fa fa-arrow-left"></i></button>
+                    <button class="next-button" style="width: 60px; height: 40px; border-radius: 25px 0px 25px 0px; background-color: rgb(224, 145, 155); color: white; border: 0px; font-size: 20px;"><i class="fa fa-arrow-right"></i> </button>
+                </div>
+        </section>
+
+
+        <section id="avis-developpeur" class="contenu">
+            <div class="container">
+                <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Qu'en pense le visionnaire de CO-ESP CS</h2>
+                <div class="avis-bulle">
+                    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgba(0, 0, 0, 0.808);">Une equipe fantastique</h2>
+                    <p style="font-size: 15px; color: rgba(0, 0, 0, 0.555); font-family: Arial, Helvetica, sans-serif;">Au nom de toute l'équipe, je suis ravi de vous accueillir chez Congo espoir coaching scolaire. Notre mission est ancrée dans l'engagement envers l'excellence éducative, la formation, le développement personnel et la croissance continue. En tant que PDG, je tiens à partager avec vous notre vision et notre passion pour le parcours éducatif exceptionnel que nous offrons.</p>
+                    <br><br>
+                    <a style="padding: 13px; background-color: orange; border-radius: 20px; width: 70px; font-size: 16px; text-decoration: none;" href="produit.html">Lire la suite</a>
+                </div>
+                <div class="photo-developpeur">
+                    <img src="Image/WhatsApp Image 2023-12-04 à 16.52.01_b39b9165.jpg" class="opinion-image" alt="Votre Photo">
+                    <p id="nom">Precieux Moukounga <br><pre id="nom1">PDG</pre></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nos-partenaires" class="contenu_par">
+            <div class="container">
+                <h2 style="font-size: 35px; color: rgba(83, 29, 211, 0.712); font-family: Arial, Helvetica, sans-serif;">Nos Partenaires</h2>
+                <div class="partenaires-container">
+                    <img src="Image/pejo cor.png" alt="Partenaire 1">
+                    
+                    
+                </div>
+                <br>
+                    <br>
+            </div>
+        </section>
+        
+        <section id="copyright" class="contenu_co">
+            <div class="container">
+                <h1>Visitez notre bureau</h1>
+                <p style="color: rgba(255, 255, 255, 0.459); font-size: 14px; font-family: Arial, Helvetica, sans-serif;">
+
+                    Le contenu de ce site, y compris mais sans s'y limiter, le texte, les graphiques, les images, et le matériel audiovisuel, est protégé par les lois sur les droits d'auteur et autres lois applicables. Le contenu est la propriété de PEJO CORPORATION  et est protégé par les lois internationales sur les droits d'auteur.
+
+                    Vous êtes autorisé à consulter, télécharger et imprimer le contenu de ce site uniquement à des fins personnelles et non commerciales. Toute autre utilisation, y compris la reproduction, la modification, la distribution, la transmission, la republication, l'affichage ou la performance du contenu de ce site sans l'autorisation préalable écrite de CO-ESP CS est strictement interdite.
+
+                    Les informations fournies sur ce site sont à titre informatif seulement et ne doivent pas être interprétées comme des conseils professionnels. CO-ESP CS ne saurait être tenu responsable de toute perte ou dommage découlant de l'utilisation de ce site ou de son contenu.
+
+                    Les marques de commerce, logos et marques de service (PEJO CORPORATION) affichés sur ce site sont des Marques déposées et non déposées de CO-ESP CS et de ses partenaires. Rien sur ce site ne doit être interprété comme octroyant, par implication, préclusion ou autrement, une licence ou un droit d'utilisation de toute Marque affichée sur le site sans l'autorisation écrite de CO-ESP CS ou du tiers détenteur de la Marque.
+
+                    Pour toute question concernant cet avis de copyright, veuillez nous contacter à <a style="color: blue;" href="mailto:Precieuxmoukouga7@gmail.com">Contact@coespcs.entreprise</a>
+                    .
+
+                    Merci de visiter CONGO ESPOIR COACHING SCOLAIRE!
+
+                </p>
+                <br>
+                <br>
+                <p>© 2023 CONGO ESPOIR COACHING SCOLAIRE. Tous droits réservés. <a href="#">Politique de confidentialité</a> - <a href="#">Conditions d'utilisation</a></p>
+            </div>
+            <br>
+        </section>
+        
+        <script src="scripts_animed_text.js"></script>
+            <script src="scripts.js"></script>
+            <script src="scripts_caro.js"></script>
+        <script src="scripts_anime_debur.js"></script>
+            <script src="scripts_charge.js"></script>
+            <script src="scripts_haut_lever.js"></script>
+            <script src="scripts_flottant.js"></script>
+
+            <div class="scroll-to-top">
+                <a href="#header">
+                    <i class="fa fa-arrow-up"></i>
+                </a>
+            </div>    
+            
+            <div class="loader-container">
+                <div class="loader"></div>
+                <p>CO-ESP CS EN CHARGEMENT...</p>
+              </div>
+
+            
+              <div id="popup" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Note⚠</h2>
+                    <p>Ouvrez votre site sur un grand ecran pour une expérience optimale. <br> <br>CO-ESP CS</p>
+                </div>
+            </div>
+            
+            
+
+
+    </body>
+</html>

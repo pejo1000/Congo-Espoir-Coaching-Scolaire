@@ -1,0 +1,74 @@
+
+.mobile-stack .intelligence-artificielle-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(238, 221, 221, 0.897);
+    border-radius: 25px 0px 25px 0px;
+}
+
+.mobile-stack .intelligence-artificielle-content img {
+    max-width: 50%;
+}
+
+.mobile-stack .intelligence-artificielle-content p {
+    flex: 1;
+}
+
+
+@media (max-width: 768px) {
+    .mobile-stack .intelligence-artificielle-content {
+        flex-direction: column;
+
+    }
+
+    .mobile-stack .intelligence-artificielle-content img {
+        max-width: 100%;
+    }
+}
+
+.mobile-stack .intelligence-artificielle-content h1{
+    font-size: 20px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+   
+    body, h1, h1 span, p, .bulle p, #Explorez, #Avenir, #mission, .offre-bulle h3, .offre-bulle p {
+        font-size: 50%; 
+    }
+
+   
+    #logo img {
+        width: 15%; 
+    }
+
+
+   
+    .intelligence-artificielle-content img {
+        max-width: 50%; 
+    }
+    
+   
+    #offres-container .offre-bulle img {
+        max-width: 50%; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    #xl {
+        font-size: 200% !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #header {
+        font-size: 18% !important;
+    }
+
+}

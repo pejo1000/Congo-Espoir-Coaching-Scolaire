@@ -1,0 +1,80 @@
+
+@media (max-width: 768px) {
+    .offres-container {
+        overflow: hidden; 
+        position: relative;
+    }
+
+    
+    
+
+    .carousel-controls {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .prev-button,
+    .next-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .prev-button {
+        margin-right: 20px;
+    }
+
+    .offre-bulle {
+        display: none; 
+        
+    }
+    
+    .offre-bulle.active {
+        display: block; 
+       
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+.offre-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+
+
+.offre-bulle {
+    display: none;
+}
+
+
+.offre-bulle.active {
+    display: block;
+}
+
+
+
+.carousel-buttons {
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-buttons button {
+    display: inline-block; 
+    margin: 0 10px; 
+}
+
+.offre-buttons{
+    width: 100%;
+}

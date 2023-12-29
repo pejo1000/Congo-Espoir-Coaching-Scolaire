@@ -1,0 +1,26 @@
+
+.menu-icon {
+    display: none; 
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: orange;
+    border-radius: 2px;
+    color: black;
+}
+
+.menu-links {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; 
+   
+    }
+
+    .menu-links {
+        display: none; 
+    }
+}
