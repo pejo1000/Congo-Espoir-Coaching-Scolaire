@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Admin</title>
     <style>
-        /* Styles CSS */
-                 /* Styles généraux */
+       
                  body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -23,7 +22,7 @@
             padding: 0;
         }
 
-        /* Styles spécifiques à la page admin */
+     
         h1 {
             text-align: center;
             margin-top: 20px;
@@ -44,7 +43,7 @@
             margin-bottom: 10px;
         }
 
-        /* Vous pouvez ajouter d'autres styles selon vos besoins */
+        
 
     </style>
 </head>
@@ -52,28 +51,23 @@
     <h1>Espace Admin</h1>
     <h2>Building components out in work!</h2>
     <ul id="connectedUsers">
-        <!-- Les utilisateurs connectés seront ajoutés ici dynamiquement avec JavaScript -->
+       
     </ul>
 
     <h2>code (0*5b003) CO-ESP CS</h2>
     <ul id="accountRequests">
-        <!-- Les demandes de création de compte seront ajoutées ici dynamiquement avec JavaScript -->
+        
     </ul>
     <p>&copy; 2023 CO-ESP CS. Tous droits réservés. | <a href="#">Politique de confidentialité</a></p>
 
     <script>
-        // Script JavaScript pour récupérer et afficher les utilisateurs connectés et les demandes de création de compte depuis le backend
-        // Vous devrez remplacer cette partie par une logique qui récupère les données depuis votre backend
-        // Par exemple, vous pourriez utiliser des appels AJAX pour récupérer les données JSON depuis votre serveur
-        // puis les afficher dans les listes ul#connectedUsers et ul#accountRequests
-
-        // Exemple de fonction pour récupérer les utilisateurs connectés depuis le backend (utilisation de fetch pour une requête HTTP)
+       
         function fetchConnectedUsers() {
             fetch('/api/connectedUsers')
                 .then(response => response.json())
                 .then(data => {
                     const connectedUsersList = document.getElementById('connectedUsers');
-                    connectedUsersList.innerHTML = ''; // Effacer le contenu existant
+                    connectedUsersList.innerHTML = ''; 
                     data.forEach(user => {
                         const listItem = document.createElement('li');
                         listItem.textContent = user.username;
@@ -83,16 +77,16 @@
                 .catch(error => console.error('Erreur lors de la récupération des utilisateurs connectés :', error));
         }
 
-        // Appeler la fonction pour récupérer les utilisateurs connectés au chargement de la page
+       
         document.addEventListener('DOMContentLoaded', fetchConnectedUsers);
 
-        // Exemple de fonction pour récupérer les demandes de création de compte depuis le backend
+       
         function fetchAccountRequests() {
             fetch('/api/accountRequests')
                 .then(response => response.json())
                 .then(data => {
                     const accountRequestsList = document.getElementById('accountRequests');
-                    accountRequestsList.innerHTML = ''; // Effacer le contenu existant
+                    accountRequestsList.innerHTML = '';
                     data.forEach(request => {
                         const listItem = document.createElement('li');
                         listItem.textContent = `${request.username} (${request.category})`;
@@ -102,7 +96,7 @@
                 .catch(error => console.error('Erreur lors de la récupération des demandes de création de compte :', error));
         }
 
-        // Appeler la fonction pour récupérer les demandes de création de compte au chargement de la page
+       
         document.addEventListener('DOMContentLoaded', fetchAccountRequests);
     </script>
 </body>
