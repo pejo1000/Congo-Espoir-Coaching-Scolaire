@@ -72,14 +72,23 @@
         <section id="contact" >
             <div class="container">
                 <h1>S'inscrire<i class="fas fa-envelope"></i></h1>
-                <h2>Inscrivez vous dès maintenant. renseignez vos qualités</h2>
+                <h2>Veillez d'abord inscrire les informations de votre parent ou tuteur</h2>
                 <p></p>
                 <form action="mailto:pro.elysepoho@gmail.com,Precieuxmoukouga7@gmail.com" method="post" enctype="text/plain">
-                    <label for="nom"><i class="fas fa-user"></i> Nom :</label>
+                    <label for="nom_Tuteur"><i class="fas fa-user"></i> Nom du parent :</label>
                     <input type="text" id="nom" name="nom" required>
 
-                    <label for="email"><i class="fas fa-envelope"></i> Email :</label>
+                    <label for="prenom_Tuteur"><i class="fas fa-user"></i> Nom du parent :</label>
+                    <input type="text" id="nom1" name="nom" required>
+
+                    <label for="email_Tuteur"><i class="fas fa-envelope"></i> Email du parent :</label>
                     <input type="email" id="email" name="email" required>
+
+                     <label class="fas fa-envelope" for="tel_Tuteur">Numéro de téléphone du parent :</label>
+                <input type="tel" id="tel" name="tel" placeholder="Numéro de téléphone" required>
+
+                    <label for="Adresse_Tuteur"><i class="fas fa-user"></i>Adresse du parent :</label>
+                    <input type="text" id="nom1" name="nom" required>
 
                     <label for="objectifs"><i class="fas fa-comment"></i> Objectifs :</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
@@ -89,17 +98,25 @@
             </div>
 
             <div style="text-align: center;">
-                <h2 style="font-family: Arial, Helvetica, sans-serif;">Champs importants</h2>
+                <h2 style="font-family: Arial, Helvetica, sans-serif;">Champs d'informations de l'adhérent </h2>
             </div>
 
             <div style=" justify-content: center;
         align-items: center;  font-family: Arial, sans-serif; display: flex;">
             <form class="form2" action="mailto:pro.elysepoho@gmail.com,Precieuxmoukouga7@gmail.com" method="post">
-                <label class="label1" for="tel">Numéro de téléphone :</label>
+                <label class="label1" for="tel_adherant">VotreNuméro de téléphone :</label>
                 <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
             
-                <label class="label1" for="profession">Niveau d'études ou d'emploi :</label>
-                <input type="text" id="profession" name="profession" placeholder="Votre profession" required>
+               <label class="label1" for="niveau_etude">Niveau d'etudes ou emploi</label>
+                <select  id="pays" class="label1" name="niveau">
+                    <option value="Primaire">Primaire </option>
+                     <option value="Collège">Collège </option>
+                     <option value="Lycee">Lycée </option>
+                     <option value="Employer">Employé </option>
+                 </select>
+
+                 <label class="label1" for="Classe">VotreClasse :</label>
+                <input class="input1" type="text" id="avatar" name="nationalite" placeholder="Classe" required>
             
                 <label class="label1" for="pays">Votre pays :</label>
                 <select  id="pays" class="label1" name="pays1">
@@ -114,6 +131,9 @@
                 
                 <label class="label1" for="age">Âge : </label>
                 <input class="input1" type="text" id="age" name="age1" placeholder="Votre âge" required>
+
+                <label for="email_adherant"><i class="label1"></i>Votre email :</label>
+                    <input type="email" id="email" name="email" required>
 
                  <label class="label1" for="ecole">Votre Ecole </label>
                 <input class="input1" type="text" id="age" name="age1" placeholder="Si vous frequentez uniquement. Sinon, laissez le champ vide" required>
