@@ -1,103 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Admin</title>
-    <style>
-       
-                 body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+           <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="contact_styles.css">
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Nous Contacter</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+        <link rel="icon" href="Image/icon.PNG" type="image/png">
+        <style>
+                body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                }
 
-        h1, h2 {
-            color: #333;
-        }
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+            h1 {
+                text-align: center;
+            }
 
-     
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
+            p {
+                text-align: center;
+            }
 
-        h2 {
-            margin-top: 30px;
-        }
+            .btn-download {
+                display: block;
+                width: 200px;
+                margin: 20px auto;
+                padding: 10px 20px;
+                text-align: center;
+                color: #fff;
+                background-color: #007bff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
 
-        ul#connectedUsers, ul#accountRequests {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
+            .btn-download:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-color: orange; border-radius: 15px;">
+            <br>
+            <br>
+            <br>
+            <p style="color: rgba(0, 0, 0, 0.685);">Le fichier PDF que vous vous appretez de telecharger contient des informations sur CO-ESP-CS, notre mission, nos buts ainsi que des données utiles pour que vous puissiez nous connaitre.</p>
+            <br>
+            <br>
+        </div>
+        <hr>
+        <div class="container">
+            <h1>Téléchargement PDF</h1>
+            <p>Cliquez sur le lien ci-dessous pour télécharger le fichier PDF :</p>
+            <a class="btn-download" href="fichier.pdf" download="Congo-Espoir-Coaching-Scolaire">Télécharger le PDF</a>
+        </div>
 
-        ul#connectedUsers li, ul#accountRequests li {
-            margin-bottom: 10px;
-        }
 
-        
+        <script src="scripts.js"></script>
 
-    </style>
-</head>
-<body>
-    <h1>Espace Admin</h1>
-    <h2>Building components out in work!</h2>
-    <ul id="connectedUsers">
-       
-    </ul>
+        <div class="loader-container">
+            <div class="loader"></div>
+            <p>CO-ESP CS EN CHARGEMENT...</p>
+        </div>
 
-    <h2>code (0*5b003) CO-ESP CS</h2>
-    <ul id="accountRequests">
-        
-    </ul>
-    <p>&copy; 2023 CO-ESP CS. Tous droits réservés. | <a href="#">Politique de confidentialité</a></p>
+        <script src="scripts_charge.js"></script>
 
-    <script>
-       
-        function fetchConnectedUsers() {
-            fetch('/api/connectedUsers')
-                .then(response => response.json())
-                .then(data => {
-                    const connectedUsersList = document.getElementById('connectedUsers');
-                    connectedUsersList.innerHTML = ''; 
-                    data.forEach(user => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = user.username;
-                        connectedUsersList.appendChild(listItem);
-                    });
-                })
-                .catch(error => console.error('Erreur lors de la récupération des utilisateurs connectés :', error));
-        }
 
-       
-        document.addEventListener('DOMContentLoaded', fetchConnectedUsers);
+        <script src="scripts_contact.js"></script>
 
-       
-        function fetchAccountRequests() {
-            fetch('/api/accountRequests')
-                .then(response => response.json())
-                .then(data => {
-                    const accountRequestsList = document.getElementById('accountRequests');
-                    accountRequestsList.innerHTML = '';
-                    data.forEach(request => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = `${request.username} (${request.category})`;
-                        accountRequestsList.appendChild(listItem);
-                    });
-                })
-                .catch(error => console.error('Erreur lors de la récupération des demandes de création de compte :', error));
-        }
-
-       
-        document.addEventListener('DOMContentLoaded', fetchAccountRequests);
-    </script>
-</body>
+    </body>
 </html>
